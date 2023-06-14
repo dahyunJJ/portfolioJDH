@@ -15,13 +15,29 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <!--  -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=cahcebustin"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <!--  -->
     <script src="./js/script.js" defer></script>
     <link rel="stylesheet" href="./css/myreset.css" />
     <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>정다현 포트폴리오</title>
   </head>
   <body>
-    <div class="introWrap mw">
+    <header class="hd mw">
+      <h1 class="logo">
+        <a href="#">로고이미지</a>
+      </h1>
+      <nav class="gnb">
+        <a href="#">ABOUT</a>
+        <a href="#">SKILL</a>
+        <a href="#">PROJECT</a>
+        <a href="#">CONTACT</a>
+      </nav>
+    </header>
+    <div class="introWrap mw fade-out">
       <p class="introTitle en animate__animated animate__fadeInUp">
         Make a Simentic Code
       </p>
@@ -35,5 +51,46 @@
         <div class="circle"></div>
       </div>
     </div>
+
+    <main>
+      <section class="sec about mw">
+        <div class="about-imgCon">
+          <img src="./images/cat.jpg" alt="my-test" />
+        </div>
+        <div class="about-inner">
+          <p class="about-title">
+            <span>안녕하세요!</span> <br />
+            <span
+              >프론트엔드 개발자를 꿈꾸는 <strong>정다현</strong>입니다.</span
+            >
+          </p>
+          <div class="flip en">
+            <p>I'm</p>
+            <ul>
+              <li>a creative newcomer</li>
+              <li>working hard</li>
+              <li>a sensible person</li>
+            </ul>
+          </div>
+          <p class="about-txt">
+            <span>잘 짜여진 코드는 무엇일까 고민합니다.</span>
+            <br />
+            <span
+              >웹 표준을 지키고, 사용하기 좋은 UI와 UX를 개발하기 위해
+              노력합니다.</span
+            >
+            <br />
+            <span
+              >좋아하는 일이 잘하는 일이 될 수 있도록 끊임없이 찾아보고 학습하고
+              있습니다.</span
+            >
+          </p>
+        </div>
+        <div class="background-box"></div>
+      </section>
+      <section class="sec skill">section2</section>
+      <section class="sec project">section3</section>
+      <section class="sec contact">section4</section>
+    </main>
   </body>
 </html>

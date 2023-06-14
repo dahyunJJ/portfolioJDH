@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wrap {
+        width: 100%;
+        height: 100vh;
+        border: 1px solid red;
+      }
+      section {
+        width: 100%;
+        height: 100vh;
+        border: 1px solid blue;
+      }
+      .fixed_section {
+        width: 100%;
+        height: 100vh;
+        background-color: antiquewhite;
+        position: fixed;
+        top: 0;
+      }
+      .main_section {
+        position: relative;
+        margin-top: 100vh;
+        z-index: 10;
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="fixed_section">
+        <p>고정영역</p>
+      </div>
+      <div class="main_section">
+        <section class="sec1">
+          <p>섹션영역1</p>
+        </section>
+        <section class="sec2">
+          <p>섹션영역2</p>
+        </section>
+        <section class="sec3">
+          <p>섹션영역3</p>
+        </section>
+        <section class="sec4">
+          <p>섹션영역4</p>
+        </section>
+      </div>
+    </div>
+    <script>
+      const fixedSection = document.querySelector(".fixed_section");
+      document.addEventListener("scroll", function () {
+        var scrollTop = document.documentElement.scrollTop;
+        console.log(scrollTop);
+        // scrollTop의 높이에 따라 fixedSection의 투명도가 1에서 0으로 변하게 만들기
+        fixedSection.style.opacity = 1 - scrollTop / 500;
+      });
+    </script>
+  </body>
+</html>
