@@ -4,7 +4,7 @@ main {
   z-index: 10;
 }
 .sec {
-  border: 1px solid dodgerblue;
+  /* border: 1px solid dodgerblue; */
   height: 100vh;
   position: relative;
 }
@@ -14,6 +14,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid var(--gray_c);
 }
 .about .about-imgCon {
   width: 400px;
@@ -116,7 +117,20 @@ main {
   font-size: 2rem;
   position: relative;
 }
-.skill .skill-edu::after {
+.skill .skill-wrap {
+  padding-top: 5rem;
+}
+.skill .back-font {
+  font-size: 200px;
+  line-height: 0.8;
+  text-align: right;
+  letter-spacing: -10px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  color: #eaeaea60;
+}
+.skill .skill-inner .skill-edu::after {
   content: "";
   border-bottom: 1px solid var(--point_c);
   width: 600px;
@@ -125,6 +139,26 @@ main {
   bottom: 10px;
   left: 100%;
   margin-left: 2rem;
+}
+.skill-inner ul {
+  /* border: 1px solid red; */
+  position: relative;
+  padding: 0 var(--gap16);
+  margin: var(--gap32);
+  line-height: 200%;
+}
+.skill-inner .edu-list li:first-of-type {
+  font-size: 1.25rem;
+  color: #888;
+}
+.skill-inner .edu-list li:first-of-type::before {
+  content: "";
+  position: absolute;
+  border-left: 5px solid #666;
+  width: 5px;
+  height: 30%;
+  top: 0;
+  left: 0;
 }
 .skill .skill-skills::after {
   content: "";
@@ -136,16 +170,10 @@ main {
   left: 100%;
   margin-left: 2rem;
 }
-.skill .back-font {
-  font-size: 200px;
-  line-height: 0.8;
-  text-align: right;
-  letter-spacing: -10px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: #eaeaea80;
+
+.skill .skill-skills {
 }
+
 /* ///// 미디어쿼리 ///// */
 @media (max-width: 1024px) {
   .about .about-title {
