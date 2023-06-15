@@ -15,10 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <!--  -->
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=cahcebustin"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
-    <!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/script.js" defer></script>
     <link rel="stylesheet" href="./css/myreset.css" />
     <link rel="stylesheet" href="./css/common.css" />
@@ -53,6 +50,7 @@
     </div>
 
     <main>
+      <!-- about -->
       <section class="sec about mw">
         <div class="about-imgCon">
           <img src="./images/cat.jpg" alt="my-test" />
@@ -88,46 +86,171 @@
         </div>
         <div class="background-box"></div>
       </section>
+
+      <!-- skill -->
       <section class="sec skill mw">
         <div class="skill-wrap">
           <p class="back-font en">
             <span>THINK</span><br /><span>POSITIVELY</span>
           </p>
-          <div class="skill-inner">
-            <span class="skill-title en skill-edu">Education.</span>
-            <ul class="edu-list">
-              <li>2022.12 ~ 2023.06</li>
-              <li>그린컴퓨터아트학원</li>
-              <li>
-                리엑트(React), 리엑트네이티브 EXPO 활용 프론트엔드개발자
-                양성과정
+          <h2 class="skill-title en edu">Education.</h2>
+          <ul class="edu-list">
+            <li>2022.12 ~ 2023.06</li>
+            <li>그린컴퓨터아트학원</li>
+            <li>
+              리엑트(React), 리엑트네이티브 EXPO 활용 프론트엔드개발자 양성과정
+            </li>
+          </ul>
+          <ul class="edu-list">
+            <li>2008.03 ~ 2012.02</li>
+            <li>충북대학교</li>
+            <li>전공 : 컴퓨터공학</li>
+          </ul>
+          <div>
+            <h2 class="skill-title en stack">Skills.</h2>
+            <span class="stack-sub">저는 이런 것들을 할 줄 압니다.</span>
+            <article class="stack-desc">
+              <div class="icons">
+                <ul class="icon-list">
+                  <li class="on">
+                    <img src="./images/icons/html-icon.svg" alt="html-icon" />
+                  </li>
+                  <li>
+                    <img src="./images/icons/css-icon.svg" alt="css-icon" />
+                  </li>
+                  <li>
+                    <img src="./images/icons/js-icon.svg" alt="js-icon" />
+                  </li>
+                  <li>
+                    <img src="./images/icons/react-icon.svg" alt="react-icon" />
+                  </li>
+                  <li>
+                    <img
+                      src="./images/icons/nodejs-icon.svg"
+                      alt="nodejs-icon"
+                    />
+                  </li>
+                  <li>
+                    <img src="./images/icons/aws-icon.svg" alt="aws-icon" />
+                  </li>
+                  <li>
+                    <img
+                      src="./images/icons/firebase-icon.svg"
+                      alt="firebase-icon"
+                    />
+                  </li>
+                </ul>
+                <ul class="icon-list">
+                  <li><img src="./images/icons/figma-icon.svg" /></li>
+                  <li>
+                    <img src="./images/icons/ps-icon.svg" alt="ps-icon" />
+                  </li>
+                  <li>
+                    <img src="./images/icons/ai-icon.svg" alt="ai-icon" />
+                  </li>
+                </ul>
+                <ul class="icon-list">
+                  <li>
+                    <img
+                      src="./images/icons/github-icon.svg"
+                      alt="github-icon"
+                    />
+                  </li>
+                  <li>
+                    <img src="./images/icons/slack-icon.svg" alt="slack-icon" />
+                  </li>
+                  <li>
+                    <img src="./images/icons/jandi-icon.svg" alt="jandi-icon" />
+                  </li>
+                  <li>
+                    <img src="./images/icons/works-icon.svg" alt="works-icon" />
+                  </li>
+                  <li>
+                    <img
+                      src="./images/icons/notion-icon.svg"
+                      alt="notion-icon"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="stack-tab">
+                <!-- stack 설명 -->
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- project -->
+      <section class="sec project mw">
+        <div>
+          <div class="swiper swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/picnic_mockup.jpg" alt="picnic_mockup" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/beer_mockup.jpg" alt="beer_mockup" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/star_mockup.jpg" alt="star_mockup" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/newneek_mockup.jpg" alt="newneek_mockup" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./images/dateGuide_Mockup.jpg"
+                  alt="dateGuide_Mockup"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/travel_mockup.jpg" alt="travel_mockup" />
+              </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+          <div class="project-list">
+            <h2 class="project-title">Project.</h2>
+            <ul>
+              <li class="project-desc">
+                <div>
+                  <p>팀프로젝트</p>
+                  <p>
+                    React와 지도 API를 활용한 유아 동반 문화시설 검색 사이트
+                  </p>
+                  <p>#react #redux #react-router #swiper #kakaomap-API</p>
+                  <p>2023.04.10 - 2023.04.28</p>
+                </div>
+                <div>
+                  <span>- Description -</span>
+                  <p>
+                    진행했던 프로젝트를 깔끔하게 보여줄 수 있고, 댓글로 피드백을
+                    받을 수 있는 포트폴리오 개발
+                  </p>
+                  <span>- Goal -</span>
+                  <p>
+                    BE개발자, 기획자 등과의 협업을 통해 커뮤니케이션 능력을
+                    향상시키기 위해 진행 카카오맵 API를 경험하기 위해
+                  </p>
+                </div>
+                <div>
+                  <img src="./images/picnic_mockup.jpg" alt="test" />
+                  <img src="./images/picnic_mockup.jpg" alt="test" />
+                  <img src="./images/picnic_mockup.jpg" alt="test" />
+                </div>
+                <!-- <button type="button" onclick="window.open('http://webtong.kr') ">웹통으로  새창이동</button> -->
+                <div>
+                  <button>DEMO</button>
+                  <button>GitHub</button>
+                </div>
               </li>
             </ul>
-            <ul class="edu-list">
-              <li>2008.03 ~ 2012.02</li>
-              <li>충북대학교</li>
-              <li>전공 : 컴퓨터공학</li>
-            </ul>
-          </div>
-          <div>
-            <span class="skill-title en skill-skills">Skills.</span>
           </div>
         </div>
       </section>
-      <section class="sec project mw">
-        <div>슬라이드영역</div>
-        <div>
-          <span class="project-title">Project.</span>
-          <div>
-            <ul>
-              <li>팀프로젝트</li>
-              <li>프로젝트명</li>
-              <li>#react #redux #react-router #swiper #kakaomap-API</li>
-              <li>2023.04.01 - 2023.04.22</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+
+      <!-- contact -->
       <section class="sec contact mw">section4</section>
     </main>
   </body>
