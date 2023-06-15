@@ -111,3 +111,69 @@ for (let i of $slides) {
     swiper.autoplay.start();
   });
 }
+
+// project 설명 부분 - project-tab
+const $projectTab = document.querySelector(".project-tab");
+const $slideCon = document.querySelectorAll(".swiper-slide");
+
+let projectData;
+fetch("./data/projectData.json")
+  .then((response) => response.json())
+  .then((data) => {
+    projectData = data;
+    projectData.forEach((item, i) => {
+      let HTML = ``;
+
+      const images = item.images.map((images) => `<p>${images}</p>`).join("");
+
+      HTML += `
+      <ul>
+                <li class="project-desc">
+                  <div>
+                    <p>${item.project}</p>
+                    <p>${item.title}</p>
+                    <p>${item.tags}</p>
+                    <p>${item.duration}</p>
+                  </div>
+                  <div>
+                    <span>- Description -</span>
+                    <p>${item.description}</p>
+                    <span>- Goal -</span>
+                    <p>${item.goal}
+                    </p>
+                  </div>
+                  <div>
+                  ${images}
+                  </div>
+                  <div>
+                    <button>DEMO</button>
+                    <button>GitHub</button>
+                  </div>
+                </li>
+              </ul>
+      `;
+
+      $projectTab.innerHTML += HTML;
+    });
+
+    // stack tab 기능 구현
+    const $projectText = $projectTab.querySelectorAll("div");
+    $projectText[0].classList.add("on");
+    $slideCon.forEach((slideitem, index) => {
+      slideitem.addEventListener("click", () => {
+        $slideCon.forEach((icon, i) => {
+          icon.classList.remove("on");
+          if (index == i) {
+            icon.classList.add("on");
+          }
+        });
+        $projectText.forEach((item, textIndex) => {
+          item.classList.remove("on");
+        });
+        $projectText[index].classList.add("on");
+      });
+    });
+  })
+  .catch((err) => {
+    console.log("error:", err);
+  });

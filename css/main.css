@@ -177,12 +177,12 @@ main {
 }
 .skill .stack-desc {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
 }
 .skill .icons {
   /* border: 1px solid red; */
-  margin: var(--gap32) var(--gap32) 0;
+  margin: var(--gap32) 0;
 }
 .skill .icon-list {
   display: flex;
@@ -202,8 +202,10 @@ main {
   filter: grayscale(0);
 }
 .skill .stack-tab {
-  margin: var(--gap32) 6rem 0;
-  /* flex-grow: 1; */
+  /* border: 1px solid red; */
+  margin-top: var(--gap32);
+  flex-grow: 1;
+  max-width: 700px;
 }
 .skill .stackTextCon {
   display: none;
@@ -275,7 +277,13 @@ main {
 }
 .project .project-list {
   width: calc(100% - 500px);
-  margin: 5rem auto 0;
+  margin: 3rem auto 0;
+}
+.project .project-tab {
+  display: none;
+}
+.project .project-tab.on {
+  display: block;
 }
 .project .project-desc > div {
   margin-top: var(--gap32);
@@ -292,7 +300,7 @@ main {
   font-weight: bold;
   display: inline-block;
   padding-left: var(--gap16);
-  margin: var(--gap32) 0 0.5rem;
+  margin: var(--gap16) 0 0.5rem;
   position: relative;
 }
 /* .project .project-desc span::after {
