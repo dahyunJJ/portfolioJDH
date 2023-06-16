@@ -33,6 +33,11 @@
   font-family: "Athiti", sans-serif;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "SCDream3", sans-serif;
   color: var(--font_c);
@@ -92,7 +97,6 @@ body {
   justify-content: center;
   align-items: stretch;
   position: fixed;
-  overflow: hidden;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -230,7 +234,9 @@ body {
   position: fixed;
   align-items: center;
   bottom: 2rem;
-  right: 2rem;
+  right: 5%;
+  z-index: 10;
+  display: none;
 }
 .gotop i {
   background-color: var(--point_c);

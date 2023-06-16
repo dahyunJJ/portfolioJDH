@@ -2,7 +2,21 @@
 setTimeout(function () {
   let circle = document.querySelector(".circle");
   circle.style.visibility = "visible";
+}, 2000);
+
+// 2.5초 후에 스크롤 활성화
+setTimeout(function () {
+  var mainElement = document.querySelector("main");
+  mainElement.style.display = "block";
 }, 2500);
+
+// gotop 버튼
+const gotop = document.querySelector(".gotop");
+
+gotop.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+});
 
 // gnb 숨기기
 let prevScrollPos = window.pageYOffset;
@@ -24,15 +38,21 @@ const fadeOut = document.querySelector(".fade-out");
 const hd = document.querySelector(".hd");
 
 document.addEventListener("scroll", function () {
-  var scrollTop = document.documentElement.scrollTop;
+  const scrollTop = document.documentElement.scrollTop;
   // console.log(scrollTop);
 
   fadeOut.style.opacity = 1 - scrollTop / 500;
 
-  if (scrollTop <= 980) {
+  if (scrollTop <= 600) {
     hd.style.display = "none";
   } else {
     hd.style.display = "flex";
+  }
+
+  if (scrollTop <= 900) {
+    gotop.style.display = "none";
+  } else {
+    gotop.style.display = "block";
   }
 });
 
@@ -54,10 +74,11 @@ fetch("./data/stackData.json")
 
       HTML += `
       <div class="stackTextCon">
-                  <h3 class="en">${item.title}</h3>
-                  <ul class="stackText">${stackItem}
-                  </ul>
-                </div>
+        <h3 class="en">${item.title}</h3>
+        <ul class="stackText">
+          ${stackItem}
+        </ul>
+      </div>
       `;
 
       $stackTab.innerHTML += HTML;
@@ -185,32 +206,8 @@ fetch("./data/projectData.json")
     console.log("error:", err);
   });
 
-// 스크롤 이벤트
-const sections = document.querySelectorAll(".sec");
-const gotop = document.querySelector(".gotop");
-
-if (window.innerWidth > 600) {
-  sections.forEach((section) => {
-    section.addEventListener("mousewheel", (e) => {
-      e.preventDefault();
-      const delta = e.wheelDelta ? e.wheelDelta : -e.detail;
-      const nextSection =
-        delta < 0 ? section.nextElementSibling : section.previousElementSibling;
-      if (nextSection) {
-        const moveTop =
-          window.pageYOffset + nextSection.getBoundingClientRect().top;
-        window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
-      }
-    });
-  });
-}
-
-gotop.addEventListener("click", (e) => {
-  e.preventDefault();
-  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-});
-
 // 섹션 이동 시 nav 활성화
+const sections = document.querySelectorAll(".sec");
 const pgLinks = document.querySelectorAll(".gnb > a");
 
 window.addEventListener("scroll", () => {

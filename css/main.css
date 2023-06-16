@@ -1,11 +1,8 @@
-html,
-body {
-  scroll-behavior: smooth;
-}
 main {
   position: relative;
   margin-top: 100vh;
   z-index: 10;
+  display: none;
 }
 .sec {
   /* border: 1px solid dodgerblue; */
@@ -107,17 +104,16 @@ main {
 
 .about .about-txt {
   color: #fff;
-  line-height: 180%;
-  border: 1px solid red;
-  width: 40vw;
+  line-height: 2rem;
   position: relative;
 }
+
 .about .background-box {
-  width: 100%;
-  height: 280px;
+  /* width: 100%; */
+  width: var(--mw);
+  height: 260px;
   position: absolute;
-  top: 0;
-  /* bottom: 20%; */
+  bottom: 14rem;
   left: 0;
   background-color: var(--main_c);
   z-index: -10;
@@ -162,18 +158,19 @@ main {
 .skill .edu-list li:first-of-type {
   font-size: 1.25rem;
   color: #888;
+  position: relative;
 }
 .skill .edu-list li:nth-of-type(2) {
   font-weight: bold;
 }
-.skill .edu-list li:first-of-type::before {
+.skill .edu-list .date::before {
   content: "";
   position: absolute;
   border-left: 5px solid #666;
   width: 5px;
-  height: 30%;
+  height: 100%;
   top: 0;
-  left: 0;
+  left: -10px;
 }
 .skill .stack::after {
   content: "";
@@ -204,7 +201,6 @@ main {
   display: flex;
   align-items: center;
   padding: 0.5rem 0;
-  min-width: 400px;
 }
 .skill .icon-list li img {
   width: 100%;
@@ -259,8 +255,6 @@ main {
 /* project 영역 */
 .project {
   position: relative;
-}
-.project > div {
   display: flex;
   justify-content: space-between;
 }
@@ -282,7 +276,7 @@ main {
 }
 .project .swiper {
   width: 30%;
-  min-width: 320px;
+  /* min-width: 320px; */
   height: 100vh;
   overflow: hidden;
   background-color: var(--main_c);
@@ -329,16 +323,6 @@ main {
   margin: var(--gap16) 0 0.5rem;
   position: relative;
 }
-/* .project .project-desc span::after {
-  content: "";
-  position: absolute;
-  border-left: 5px solid var(--main_c);
-  width: 5px;
-  height: 80%;
-  transform: translateY(20%);
-  top: 0;
-  left: 0;
-} */
 .project .project-desc > div:nth-of-type(3) {
   width: calc(100% - 2rem);
   margin: var(--gap32) auto;
@@ -445,12 +429,20 @@ main {
     font-size: 7rem;
   }
   .skill .stack-desc {
-    /* display: block; */
     flex-direction: column;
     align-items: center;
   }
   .skill .stack-tab {
     margin: var(--gap32) 0;
+  }
+  .project {
+    /* display: block; */
+  }
+  .project .swiper {
+    /* height: 80vh; */
+  }
+  .project .project-desc div:nth-of-type(3) {
+    display: none;
   }
 }
 
@@ -460,18 +452,31 @@ main {
   }
   .about .about-imgCon {
     margin: 3rem auto;
-    /* width: calc(60% - 2rem); */
   }
   .about .background-box {
-    height: 25%;
-    bottom: 10%;
+    bottom: 10.5rem;
+  }
+  .skill .edu-list li:first-of-type {
+    font-size: 1rem;
+  }
+  .skill .edu-list li:last-of-type {
+    font-size: 0.9rem;
+  }
+  .skill .icon-list {
+    flex-wrap: wrap;
+  }
+  .skill .icon-list li img {
+    width: 90%;
+    padding: 0 0.25rem;
+  }
+  .contact .back_font {
+    font-size: 12rem;
   }
 }
 
 @media (max-width: 480px) {
   .about .about-imgCon {
     width: calc(100% - 2rem);
-    /* width: 340px; */
   }
   .about .about-inner {
     padding: 0 var(--gap16);
@@ -484,14 +489,17 @@ main {
     font-size: 0.8rem;
   }
   .about .background-box {
-    height: 30%;
-    bottom: 12%;
+    bottom: 14rem;
   }
-}
-@media (max-width: 430px) {
-  .about .background-box {
-    height: 30%;
-    bottom: 10%;
+  .skill .icon-list li {
+    margin: auto;
+  }
+  .skill .icon-list li img {
+    width: 80%;
+    padding: 0;
+  }
+  .contact .contact-list1 p:first-of-type {
+    font-size: 28px;
   }
 }
 @media (max-width: 340px) {
@@ -500,7 +508,25 @@ main {
     font-size: 1.4rem;
   }
   .about .background-box {
-    height: 32%;
-    bottom: 0;
+    bottom: 16rem;
+  }
+  .skill .icon-list li {
+    margin: auto;
+  }
+  .skill .icon-list li img {
+    width: 65%;
+  }
+  .contact .contact-list1 p:first-of-type {
+    font-size: 22px;
+  }
+  .contact .contact-list1 p:nth-of-type(2) {
+    font-size: 20px;
+  }
+  .contact .contact-list2 p:nth-of-type(2) {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+  .contact .contact-list3 p:first-of-type {
+    white-space: nowrap;
   }
 }
