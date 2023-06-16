@@ -7,10 +7,12 @@
     "description": "한국문화정보원에서 제공하는 공공 데이터와 지도 API를 활용하여 React를 기반으로 만든 반응형 웹사이트",
     "goal": "전국의 유아 동반이 가능한 문화시설에 대한 정보를 한 눈에 파악할 수 있도록 리스트의 형태로 구현 및 검색 기능 제공",
     "images": [
-      "./images/picnic_mockup.jpg",
-      "./images/picnic_mockup.jpg",
-      "./images/picnic_mockup.jpg"
-    ]
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/picnic1.jpg?token=GHSAT0AAAAAACD7MP73AZQ6VQ7DFEZTYFQEZELYWYA",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/picnic2.jpg?token=GHSAT0AAAAAACD7MP73TPQ25NYTTUQOK7VYZELYXEA",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/picnic3.jpg?token=GHSAT0AAAAAACD7MP72GLMHAZZFQ4A7BX7EZELYXMQ"
+    ],
+    "demo": "https://dahyunjj.github.io/project04_Picnic/",
+    "github": "https://github.com/dahyunJJ/project04_Picnic"
   },
   {
     "project": "개인프로젝트",
@@ -20,10 +22,12 @@
     "description": "openai-API를 활용한 간단한 챗봇 서비스",
     "goal": "데이트 코스가 고민되는 사용자에게 지역별, 테마별 코스를 추천해주고 추가 질문 및 답변도 가능한 기능 제공",
     "images": [
-      "./images/picnic_mockup.jpg",
-      "./images/picnic_mockup.jpg",
-      "./images/picnic_mockup.jpg"
-    ]
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide1.jpg?token=GHSAT0AAAAAACD7MP72LPGIC554CFCPSDBIZELYXWA",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide2.jpg?token=GHSAT0AAAAAACD7MP73U7TTQHUHOKMZ7H42ZELYYDQ",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide2.jpg?token=GHSAT0AAAAAACD7MP73U7TTQHUHOKMZ7H42ZELYYDQ"
+    ],
+    "demo": "https://dateguide.pages.dev/",
+    "github": "https://github.com/dahyunJJ/project05_DateGuide"
   },
   {
     "project": "개인프로젝트",
@@ -33,10 +37,12 @@
     "description": "다녀왔던 여행지에 대한 내용을 일기 형태로 기록할 수 있는 웹 서비스",
     "goal": "국내 및 해외 여행을 다녀온 후 그 여행지에 대한 감상을 남길 수 있고, 검색 기능도 제공",
     "images": [
-      "./images/picnic_mockup.jpg",
-      "./images/picnic_mockup.jpg",
-      "./images/picnic_mockup.jpg"
-    ]
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/travel1.jpg?token=GHSAT0AAAAAACD7MP72SW7PJBOEGA5VBQGIZELYYXA",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/travel2.jpg?token=GHSAT0AAAAAACD7MP72HXDAIZKIM6DHOCH2ZELYYZA",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/travel3.jpg?token=GHSAT0AAAAAACD7MP736KV6CE3CTFB5FBIIZELYY3A"
+    ],
+    "demo": "https://port-0-traveldiary-1io3t2blg1jxozy.sel3.cloudtype.app/",
+    "github": "https://github.com/dahyunJJ/project03_travelDiary"
   },
   {
     "project": "팀프로젝트",
@@ -46,10 +52,12 @@
     "description": "복잡한 사이트맵을 재구성하고 예약 프로세스를 개선한 반응형 웹사이트",
     "goal": "사용자의 편의성을 증가시키기 위해 레이아웃을 개선하고, 날씨 API를 활용하여 사용자에게 정보를 제공",
     "images": [
-      "./images/picnic_mockup.jpg",
-      "./images/picnic_mockup.jpg",
-      "./images/picnic_mockup.jpg"
-    ]
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/star1.jpg?token=GHSAT0AAAAAACD7MP73DPFH77Q6Q2PYL6QIZELYZ5A",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/star2.jpg?token=GHSAT0AAAAAACD7MP72CALQZWAZ3HX3PPGUZELYZ7A",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/star3.jpg?token=GHSAT0AAAAAACD7MP73OG7GOD3BSTW7LJU6ZELY2BA"
+    ],
+    "demo": "https://dahyunjj.github.io/project02_djstar/",
+    "github": "https://github.com/dahyunJJ/project02_djstar"
   },
   {
     "project": "팀프로젝트",
@@ -59,10 +67,12 @@
     "description": "사이트의 장단점을 분석하여 사용자의 사용성과 콘텐츠 접근성을 개선한 반응형 웹사이트",
     "goal": "구독 서비스에 알맞은 레이아웃으로 개선하여 사용자에게 정보를 효율적으로 제공",
     "images": [
-      "./images/picnic_mockup.jpg",
-      "./images/picnic_mockup.jpg",
-      "./images/picnic_mockup.jpg"
-    ]
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/newneek1.jpg?token=GHSAT0AAAAAACD7MP73MCPMQSYE6FRLTUOUZELY2SQ",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/newneek2.jpg?token=GHSAT0AAAAAACD7MP72Q44OGNHVQCHV6XNYZELY2UA",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/newneek3.jpg?token=GHSAT0AAAAAACD7MP73RGXWVT5LKGMYKWVYZELY2YA"
+    ],
+    "demo": "https://dahyunjj.github.io/project01_newneek/",
+    "github": "https://github.com/dahyunJJ/project01_newneek"
   },
   {
     "project": "개인프로젝트",
@@ -72,9 +82,11 @@
     "description": "맥주 데이터를 활용하여 사용자에게 맥주를 추천하는 앱 서비스",
     "goal": "React-Native와 firebase를 활용하여 회원가입 및 로그인/로그아웃, 게시글 등록 기능을 제공 ",
     "images": [
-      "./images/picnic_mockup.jpg",
-      "./images/picnic_mockup.jpg",
-      "./images/picnic_mockup.jpg"
-    ]
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/beer1.jpg?token=GHSAT0AAAAAACD7MP72OMIT5VPFAK5S2ZO4ZELY3HA",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/beer3.jpg?token=GHSAT0AAAAAACD7MP73PE7BG3RVDBH7SWOOZELY3JQ",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/beer2.jpg?token=GHSAT0AAAAAACD7MP73GZ2ZBABIF2Q6YYKOZELY3LA"
+    ],
+    "demo": "",
+    "github": "https://github.com/dahyunJJ/project06_HoneyBeer"
   }
 ]

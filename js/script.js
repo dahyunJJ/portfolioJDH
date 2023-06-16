@@ -96,10 +96,6 @@ var swiper = new Swiper(".swiper-container", {
     disableOnInteraction: false,
   },
   loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
 });
 
 let $slides = document.querySelectorAll(".swiper-slide");
@@ -123,11 +119,16 @@ fetch("./data/projectData.json")
     projectData = data;
     projectData.forEach((item, i) => {
       let HTML = ``;
+      let images = ``;
+      item.images.map((img, i) => {
+        let imgHtml = `
+        <img src="${img}" alt="이미지${i}"/>`;
+        images += imgHtml;
+      });
+      // console.log(images, "===dd");
+      // console.log(item.demo);
 
-      const images = item.images.map((images) => `<p>${images}</p>`).join("");
-
-      HTML += `
-      <ul>
+      HTML += `      
                 <li class="project-desc">
                   <div>
                     <p>${item.project}</p>
@@ -146,20 +147,26 @@ fetch("./data/projectData.json")
                   ${images}
                   </div>
                   <div>
-                    <button>DEMO</button>
-                    <button>GitHub</button>
+                  ${
+                    item.demo
+                      ? `<button class="en" onclick="window.open('${item.demo}')">DEMO</button>`
+                      : `<button class="en">DEMO</button>`
+                  }
+                    <button class="en" onclick="window.open('${
+                      item.github
+                    }')">GitHub</button>
                   </div>
                 </li>
-              </ul>
       `;
 
       $projectTab.innerHTML += HTML;
     });
 
-    // stack tab 기능 구현
-    const $projectText = $projectTab.querySelectorAll("div");
+    // project-tab 기능 구현
+    const $projectText = $projectTab.querySelectorAll("li");
     $projectText[0].classList.add("on");
     $slideCon.forEach((slideitem, index) => {
+      // console.log(slideitem, index);
       slideitem.addEventListener("click", () => {
         $slideCon.forEach((icon, i) => {
           icon.classList.remove("on");
@@ -177,3 +184,43 @@ fetch("./data/projectData.json")
   .catch((err) => {
     console.log("error:", err);
   });
+
+// 스크롤 이벤트
+const sections = document.querySelectorAll(".sec");
+const gotop = document.querySelector(".gotop");
+
+if (window.innerWidth > 600) {
+  sections.forEach((section) => {
+    section.addEventListener("mousewheel", (e) => {
+      e.preventDefault();
+      const delta = e.wheelDelta ? e.wheelDelta : -e.detail;
+      const nextSection =
+        delta < 0 ? section.nextElementSibling : section.previousElementSibling;
+      if (nextSection) {
+        const moveTop =
+          window.pageYOffset + nextSection.getBoundingClientRect().top;
+        window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
+      }
+    });
+  });
+}
+
+gotop.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+});
+
+// 섹션 이동 시 nav 활성화
+const pgLinks = document.querySelectorAll(".gnb > a");
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  sections.forEach((section, i) => {
+    if (scrollTop >= section.offsetTop - 50) {
+      pgLinks.forEach((a) => {
+        a.classList.remove("on");
+      });
+      pgLinks[i].classList.add("on");
+    }
+  });
+});
