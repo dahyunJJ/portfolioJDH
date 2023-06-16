@@ -404,7 +404,7 @@ main {
 .contact .contact-list3 strong {
   color: var(--point_c);
 }
-.contact .contact-list3 p:hover a {
+.contact .contact-list3 p a:hover {
   font-weight: bold;
 }
 .contact .copyright {
