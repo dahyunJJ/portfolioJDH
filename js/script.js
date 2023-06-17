@@ -213,7 +213,7 @@ const pgLinks = document.querySelectorAll(".gnb > a");
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
   sections.forEach((section, i) => {
-    if (scrollTop >= section.offsetTop - 50) {
+    if (scrollTop >= section.offsetTop) {
       pgLinks.forEach((a) => {
         a.classList.remove("on");
       });

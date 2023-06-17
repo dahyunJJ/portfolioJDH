@@ -50,7 +50,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
+  height: 80px;
   padding: var(--gap16);
   border-bottom: 1px solid var(--gray_c);
   position: fixed;
@@ -66,8 +66,11 @@ body {
   top: 0; /* 헤더가 나타날 위치 */
 }
 .hd .logo {
-  width: 150px;
+  width: 140px;
   text-align: center;
+}
+.hd .logo img {
+  width: 100%;
 }
 .hd .gnb {
   /* width: 40%; */
@@ -80,9 +83,12 @@ body {
   width: 100px;
   padding: 0.25rem 0.5rem;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1.25rem;
 }
-.hd .gnb a:hover,
+.hd .gnb a:hover {
+  font-weight: bold;
+  color: var(--point_c);
+}
 .hd .gnb a.on {
   background-color: var(--main_c);
   color: #fff;
@@ -143,7 +149,7 @@ body {
 }
 .scroll-down-con .scroll-down {
   color: var(--gray_c);
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   padding: var(--gap16);
 }
 .circle {
@@ -271,8 +277,8 @@ body {
 
 @media (max-width: 768px) {
   .hd {
+    height: 120px;
     flex-direction: column;
-    height: 80px;
   }
   .hd .gnb {
     margin-top: 0.5rem;
@@ -295,13 +301,17 @@ body {
 }
 
 @media (max-width: 480px) {
+  .hd .logo {
+    width: 120px;
+    text-align: center;
+  }
   .hd .gnb {
     width: 100%;
   }
   .hd .gnb a {
     width: calc(100% / 4 - 1rem);
     margin: auto;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
   .introWrap .introTitle {
     font-size: 28px;
@@ -313,12 +323,6 @@ body {
 }
 
 @media (max-width: 340px) {
-  .hd {
-    height: 100px;
-  }
-  .hd .gnb a {
-    font-size: 0.6rem;
-  }
   .introWrap .introTitle {
     font-size: 24px;
     text-align: center;
