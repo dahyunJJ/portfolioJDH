@@ -485,6 +485,7 @@ main {
   .about .about-title {
     font-size: 1.3rem;
     margin-top: 4rem;
+    white-space: normal;
   }
   .about .about-txt {
     font-size: 0.8rem;
@@ -495,9 +496,16 @@ main {
   .skill .icon-list li {
     margin: auto;
   }
+  .skill .icon-list:nth-of-type(3) {
+    flex-wrap: nowrap;
+  }
   .skill .icon-list li img {
     width: 80%;
     padding: 0;
+  }
+  .skill .stackTextCon h3 {
+    white-space: nowrap;
+    font-size: 1.4rem;
   }
   .contact .contact-list1 p:first-of-type {
     font-size: 28px;
@@ -517,6 +525,9 @@ main {
   .skill .icon-list li img {
     width: 65%;
   }
+  .skill .stackTextCon h3 {
+    font-size: 1.2rem;
+  }
   .contact .contact-list1 p:first-of-type {
     font-size: 22px;
   }
@@ -529,5 +540,10 @@ main {
   }
   .contact .contact-list3 p:first-of-type {
     white-space: nowrap;
+  }
+  .contact .contact-list1,
+  .contact .contact-list2,
+  .contact .contact-list3 {
+    text-align: center;
   }
 }
