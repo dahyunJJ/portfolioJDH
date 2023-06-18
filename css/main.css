@@ -42,6 +42,7 @@ main {
 .about .about-title {
   font-size: 2rem;
   line-height: 180%;
+  white-space: nowrap;
 }
 .about .about-title strong {
   font-family: "SCDream5";
@@ -454,7 +455,7 @@ main {
     margin: 3rem auto;
   }
   .about .background-box {
-    bottom: 10.5rem;
+    bottom: 15%;
   }
   .skill .edu-list li:first-of-type {
     font-size: 1rem;
