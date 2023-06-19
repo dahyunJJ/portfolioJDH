@@ -275,9 +275,8 @@ main {
   left: 100%;
   margin-left: 2rem;
 }
-.project .swiper {
+.project .swiper-row {
   width: 30%;
-  /* min-width: 320px; */
   height: 100vh;
   overflow: hidden;
   background-color: var(--main_c);
@@ -289,6 +288,7 @@ main {
   display: block;
   width: 100%;
   height: 100%;
+  object-position: center;
   object-fit: cover;
   transition: 0.3s;
 }
@@ -296,6 +296,7 @@ main {
   cursor: pointer;
   transform: scale(1.1);
 }
+
 .project .project-list {
   width: calc(100% - 500px);
   margin: 3rem auto 0;
@@ -415,6 +416,7 @@ main {
   left: 50%;
   transform: translateX(-50%);
   padding: var(--gap16) 0;
+  white-space: nowrap;
 }
 
 /* ///// 반응형 ///// */
@@ -437,13 +439,21 @@ main {
     margin: var(--gap32) 0;
   }
   .project {
-    /* display: block; */
+    display: block;
   }
-  .project .swiper {
-    /* height: 80vh; */
+  .project .swiper-row {
+    width: 100%;
+    height: 200px;
+    margin-top: var(--gap32);
+    background-color: transparent;
   }
-  .project .project-desc div:nth-of-type(3) {
-    display: none;
+  .project .swiper-row .swiper-slide img {
+    object-fit: cover;
+    object-position: center;
+  }
+  .project .project-list {
+    width: calc(100% - 1rem);
+    margin: auto;
   }
 }
 
@@ -469,6 +479,12 @@ main {
   .skill .icon-list li img {
     width: 90%;
     padding: 0 0.25rem;
+  }
+  .skill .stackText {
+    font-size: 14px;
+  }
+  .project .project-desc div:nth-of-type(3) {
+    display: none;
   }
   .contact .back_font {
     font-size: 12rem;
@@ -507,8 +523,29 @@ main {
     white-space: nowrap;
     font-size: 1.4rem;
   }
+  .project .project-desc div:first-child p:nth-of-type(2) {
+    font-size: 1.25rem;
+  }
+  .project .project-desc div:nth-of-type(2) span {
+    font-size: 18px;
+  }
+  .project .project-desc div:nth-of-type(2) p {
+    font-size: 14px;
+  }
+  .project .project-desc div:last-of-type {
+    display: flex;
+    flex-direction: column;
+  }
+  .project .project-desc div:last-of-type button {
+    margin-top: var(--gap16);
+  }
   .contact .contact-list1 p:first-of-type {
     font-size: 28px;
+  }
+}
+@media (max-width: 400px) {
+  .about .background-box {
+    bottom: 14rem;
   }
 }
 @media (max-width: 340px) {
@@ -527,6 +564,10 @@ main {
   }
   .skill .stackTextCon h3 {
     font-size: 1.2rem;
+  }
+  .project .project-desc div:first-child p:nth-of-type(2) {
+    font-size: 1rem;
+    font-weight: bold;
   }
   .contact .contact-list1 p:first-of-type {
     font-size: 22px;

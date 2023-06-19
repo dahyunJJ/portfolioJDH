@@ -24,7 +24,7 @@
     "images": [
       "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide1.jpg?token=GHSAT0AAAAAACD7MP72LPGIC554CFCPSDBIZELYXWA",
       "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide2.jpg?token=GHSAT0AAAAAACD7MP73U7TTQHUHOKMZ7H42ZELYYDQ",
-      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide2.jpg?token=GHSAT0AAAAAACD7MP73U7TTQHUHOKMZ7H42ZELYYDQ"
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide3.jpg"
     ],
     "demo": "https://dateguide.pages.dev/",
     "github": "https://github.com/dahyunJJ/project05_DateGuide"
@@ -49,7 +49,7 @@
     "title": "대전시민천문대 리뉴얼",
     "tags": "#HTML #CSS #JavaScript open-API",
     "duration": "2023.02.24 - 2023.03.24",
-    "description": "복잡한 사이트맵을 재구성하고 예약 프로세스를 개선한 반응형 웹사이트",
+    "description": "두번째 프로젝트. 복잡한 사이트맵을 재구성하고 예약 프로세스를 개선한 반응형 웹사이트",
     "goal": "사용자의 편의성을 증가시키기 위해 레이아웃을 개선하고, 날씨 API를 활용하여 사용자에게 정보를 제공",
     "images": [
       "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/star1.jpg?token=GHSAT0AAAAAACD7MP73DPFH77Q6Q2PYL6QIZELYZ5A",
@@ -64,7 +64,7 @@
     "title": "뉴닉 구독 웹서비스 리뉴얼",
     "tags": "#HTML #CSS #JavaScript",
     "duration": "2023.01.25 - 2023.02.23",
-    "description": "사이트의 장단점을 분석하여 사용자의 사용성과 콘텐츠 접근성을 개선한 반응형 웹사이트",
+    "description": "첫번째 프로젝트. 사이트의 장단점을 분석하여 사용자의 사용성과 콘텐츠 접근성을 개선한 반응형 웹사이트",
     "goal": "구독 서비스에 알맞은 레이아웃으로 개선하여 사용자에게 정보를 효율적으로 제공",
     "images": [
       "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/newneek1.jpg?token=GHSAT0AAAAAACD7MP73MCPMQSYE6FRLTUOUZELY2SQ",

@@ -106,17 +106,56 @@ fetch("./data/stackData.json")
     console.log("error:", err);
   });
 
-// project 영역 슬라이드
-var swiper = new Swiper(".swiper-container", {
-  direction: "vertical",
-  slidesPerView: 3,
-  spaceBetween: 10,
+// project 영역 슬라이드 (세로 슬라이드 - 1024 이상)
+// var swiper1 = new Swiper(".swiper-col", {
+//   direction: "vertical",
+//   slidesPerView: 3,
+//   spaceBetween: 10,
+//   centeredSlides: true,
+//   autoplay: {
+//     delay: 2000,
+//     disableOnInteraction: false,
+//   },
+//   loop: true,
+// });
+
+// let $slides = document.querySelectorAll(".swiper-slide");
+// for (let i of $slides) {
+//   i.addEventListener("mouseover", function () {
+//     swiper1.autoplay.stop();
+//   });
+//   i.addEventListener("mouseout", function () {
+//     swiper1.autoplay.start();
+//   });
+// }
+
+// project 영역 슬라이드 (가로 슬라이드 - 1024 이하)
+var swiper = new Swiper(".swiper-row", {
+  direction: "horizontal",
+  slidesPerView: 1,
   centeredSlides: true,
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
   },
   loop: true,
+  breakpoints: {
+    480: {
+      direction: "horizontal",
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      direction: "horizontal",
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1024: {
+      direction: "vertical",
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+  },
 });
 
 let $slides = document.querySelectorAll(".swiper-slide");
@@ -171,7 +210,7 @@ fetch("./data/projectData.json")
                   ${
                     item.demo
                       ? `<button class="en" onclick="window.open('${item.demo}')">DEMO</button>`
-                      : `<button class="en">DEMO</button>`
+                      : `<button class="en" disabled>DEMO</button>`
                   }
                     <button class="en" onclick="window.open('${
                       item.github
