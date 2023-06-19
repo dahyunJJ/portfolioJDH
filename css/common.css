@@ -44,6 +44,9 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+body.no-scroll {
+  overflow: hidden !important;
+}
 
 /* ///// 헤더 영역 ///// */
 .hd {

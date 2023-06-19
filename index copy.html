@@ -12,8 +12,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -27,7 +29,7 @@
 
     <title>정다현 포트폴리오</title>
   </head>
-  <body class="no-scroll">
+  <body>
     <div class="wrap">
       <header class="hd mw">
         <h1 class="logo">
@@ -41,11 +43,11 @@
         </nav>
       </header>
       <section class="introWrap mw fade-out">
-        <h2 class="introTitle en" data-aos="fade-up" data-aos-duration="2000">
+        <h2 class="introTitle en animate__animated animate__fadeInUp">
           Make a Simentic Code
         </h2>
         <div class="introLine"></div>
-        <p class="introTitle_ko" data-aos="fade-down" data-aos-duration="2000">
+        <p class="introTitle_ko animate__animated animate__fadeInDown">
           태그의 의미를 생각하며 차곡차곡 쌓아갑니다.
         </p>
         <div class="scroll-down-con">
@@ -61,12 +63,7 @@
         </a>
         <!-- about -->
         <section id="about" class="sec about mw">
-          <div
-            class="aboutCon"
-            data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom"
-            data-aos-duration="2500"
-          >
+          <div class="aboutCon animate__animated animate__fadeInUp">
             <div class="about-imgCon">
               <img src="./images/my.jpg" alt="my" />
             </div>
@@ -212,15 +209,6 @@
           <div class="swiper swiper-row">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="./images/star_mockup.jpg" alt="star_mockup" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/newneek_mockup.jpg" alt="newneek_mockup" />
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/beer_mockup.jpg" alt="beer_mockup" />
-              </div>
-              <div class="swiper-slide">
                 <img
                   class="on"
                   src="./images/picnic_mockup.jpg"
@@ -236,8 +224,16 @@
               <div class="swiper-slide">
                 <img src="./images/travel_mockup.jpg" alt="travel_mockup" />
               </div>
+              <div class="swiper-slide">
+                <img src="./images/star_mockup.jpg" alt="star_mockup" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/newneek_mockup.jpg" alt="newneek_mockup" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/beer_mockup.jpg" alt="beer_mockup" />
+              </div>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
           <div class="project-list">
             <h2 class="project-title">Project.</h2>

@@ -1,21 +1,30 @@
 main {
   position: relative;
-  margin-top: 100vh;
+  padding-top: 100vh;
   z-index: 10;
-  display: none;
 }
 .sec {
   /* border: 1px solid dodgerblue; */
   min-height: 100vh;
   position: relative;
   border-bottom: 1px solid var(--gray_c);
+  overflow: hidden;
 }
 
 /* ///// about 영역 ///// */
 .about {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.about .aboutCon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about .aboutCon div {
+  margin: auto;
 }
 .about .about-imgCon {
   width: 400px;
@@ -48,7 +57,6 @@ main {
   font-family: "SCDream5";
 }
 .about .flip-con {
-  border: 1px solid red;
   width: 100%;
 }
 .about .about-inner .flip {
@@ -110,11 +118,10 @@ main {
 }
 
 .about .background-box {
-  /* width: 100%; */
   width: var(--mw);
-  height: 260px;
+  height: 300px;
   position: absolute;
-  bottom: 14rem;
+  top: 48%;
   left: 0;
   background-color: var(--main_c);
   z-index: -10;
@@ -296,6 +303,31 @@ main {
   cursor: pointer;
   transform: scale(1.1);
 }
+.swiper {
+  overflow: visible !important;
+}
+.swiper .swiper-pagination {
+  position: absolute;
+  right: -30px;
+  top: 250px;
+}
+.swiper .swiper-pagination-bullet {
+  background-color: var(--point_c);
+  margin: 0.5rem 0 !important;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: 1px solid pink;
+}
+.swiper-pagination-bullet-active {
+  height: 20px;
+  transition: height 0.5s;
+  border-radius: 5px;
+  background: pink;
+  border: 1px solid transparent;
+}
 
 .project .project-list {
   width: calc(100% - 500px);
@@ -451,21 +483,48 @@ main {
     object-fit: cover;
     object-position: center;
   }
+
+  .swiper .swiper-pagination {
+    position: absolute;
+    top: 110%;
+  }
+  .swiper .swiper-pagination-bullet {
+    background-color: var(--point_c);
+    margin: 0 0.25rem !important;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 1px solid pink;
+  }
+  .swiper-pagination-bullet-active {
+    width: 20px;
+    transition: width 0.5s;
+    border-radius: 5px;
+    background: pink;
+    border: 1px solid transparent;
+  }
+
   .project .project-list {
     width: calc(100% - 1rem);
-    margin: auto;
+    margin: 3rem auto;
   }
 }
 
 @media (max-width: 768px) {
-  .sec {
+  .about .aboutCon {
     display: block;
   }
   .about .about-imgCon {
     margin: 3rem auto;
   }
+  .about .about-inner {
+    padding-top: var(--gap32);
+  }
   .about .background-box {
-    bottom: 15%;
+    top: 68%;
+    height: 240px;
   }
   .skill .edu-list li:first-of-type {
     font-size: 1rem;
@@ -506,9 +565,6 @@ main {
   .about .about-txt {
     font-size: 0.8rem;
   }
-  .about .background-box {
-    bottom: 10rem;
-  }
   .skill .icon-list li {
     margin: auto;
   }
@@ -545,7 +601,7 @@ main {
 }
 @media (max-width: 400px) {
   .about .background-box {
-    bottom: 14rem;
+    top: 66%;
   }
 }
 @media (max-width: 340px) {
@@ -554,7 +610,7 @@ main {
     font-size: 1.4rem;
   }
   .about .background-box {
-    bottom: 16rem;
+    top: 60%;
   }
   .skill .icon-list li {
     margin: auto;

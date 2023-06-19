@@ -1,13 +1,15 @@
-// 2.5초 뒤에 scroll-down 애니메이션 시작
+// 2초 뒤에 scroll-down 애니메이션 시작
 setTimeout(function () {
-  let circle = document.querySelector(".circle");
+  const circle = document.querySelector(".circle");
   circle.style.visibility = "visible";
 }, 2000);
 
-// 2.5초 후에 스크롤 활성화
+// 2.5초 후에 스크롤&gnb 활성화
 setTimeout(function () {
-  var mainElement = document.querySelector("main");
-  mainElement.style.display = "block";
+  const hd = document.querySelector(".hd");
+  hd.classList.add("header-visible");
+
+  document.body.classList.remove("no-scroll");
 }, 2500);
 
 // gotop 버튼
@@ -18,24 +20,24 @@ gotop.addEventListener("click", (e) => {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 });
 
-// gnb 숨기기
-let prevScrollPos = window.pageYOffset;
+// 스크롤 내리면 gnb 나타나고 스크롤 올리면 gnb 숨기기
+let prevScrollPos = window.pageYOffset; // 이전 스크롤 위치를 저장
+const hd = document.querySelector(".hd");
 
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
 
   if (prevScrollPos > currentScrollPos) {
-    document.querySelector(".hd").classList.add("header-visible");
+    hd.classList.add("header-visible");
   } else {
-    document.querySelector(".hd").classList.remove("header-visible");
+    hd.classList.remove("header-visible");
   }
 
   prevScrollPos = currentScrollPos;
 };
 
-// scrollTop의 높이에 따라 fadeOut의 투명도가 1에서 0으로 변하게 만들기
+// scrollTop의 높이에 따라 인트로 투명도가 1에서 0으로 변하게 만들기
 const fadeOut = document.querySelector(".fade-out");
-const hd = document.querySelector(".hd");
 
 document.addEventListener("scroll", function () {
   const scrollTop = document.documentElement.scrollTop;
@@ -106,30 +108,7 @@ fetch("./data/stackData.json")
     console.log("error:", err);
   });
 
-// project 영역 슬라이드 (세로 슬라이드 - 1024 이상)
-// var swiper1 = new Swiper(".swiper-col", {
-//   direction: "vertical",
-//   slidesPerView: 3,
-//   spaceBetween: 10,
-//   centeredSlides: true,
-//   autoplay: {
-//     delay: 2000,
-//     disableOnInteraction: false,
-//   },
-//   loop: true,
-// });
-
-// let $slides = document.querySelectorAll(".swiper-slide");
-// for (let i of $slides) {
-//   i.addEventListener("mouseover", function () {
-//     swiper1.autoplay.stop();
-//   });
-//   i.addEventListener("mouseout", function () {
-//     swiper1.autoplay.start();
-//   });
-// }
-
-// project 영역 슬라이드 (가로 슬라이드 - 1024 이하)
+// project 영역 슬라이드
 var swiper = new Swiper(".swiper-row", {
   direction: "horizontal",
   slidesPerView: 1,
@@ -155,6 +134,10 @@ var swiper = new Swiper(".swiper-row", {
       slidesPerView: 3,
       spaceBetween: 10,
     },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
   },
 });
 
@@ -260,3 +243,5 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+AOS.init();

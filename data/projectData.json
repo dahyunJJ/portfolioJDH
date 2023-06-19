@@ -1,7 +1,7 @@
 [
   {
     "project": "팀프로젝트",
-    "title": "아이소풍(유아 동반 문화시설 검색사이트)",
+    "title": "1. 아이소풍(유아 동반 문화시설 검색사이트)",
     "tags": "#react #redux #kakaomap-API",
     "duration": "2023.04.10 - 2023.04.28",
     "description": "한국문화정보원에서 제공하는 공공 데이터와 지도 API를 활용하여 React를 기반으로 만든 반응형 웹사이트",
@@ -16,22 +16,22 @@
   },
   {
     "project": "개인프로젝트",
-    "title": "DateGuide(데이트 코스 추천)",
+    "title": "2. DateGuide(데이트 코스 추천)",
     "tags": "#HTML #CSS #JavaScript #openai-API",
     "duration": "2023.05.01 - 2023.05.08",
     "description": "openai-API를 활용한 간단한 챗봇 서비스",
     "goal": "데이트 코스가 고민되는 사용자에게 지역별, 테마별 코스를 추천해주고 추가 질문 및 답변도 가능한 기능 제공",
     "images": [
-      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide1.jpg?token=GHSAT0AAAAAACD7MP72LPGIC554CFCPSDBIZELYXWA",
-      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide2.jpg?token=GHSAT0AAAAAACD7MP73U7TTQHUHOKMZ7H42ZELYYDQ",
-      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide3.jpg"
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide1.png",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide2-1.jpg",
+      "https://raw.githubusercontent.com/dahyunJJ/portfolio_img/master/dateguide3.png"
     ],
     "demo": "https://dateguide.pages.dev/",
     "github": "https://github.com/dahyunJJ/project05_DateGuide"
   },
   {
     "project": "개인프로젝트",
-    "title": "여행기억(CRUD 구현)",
+    "title": "3. 여행기억(CRUD 구현)",
     "tags": "#EJS #CSS #JavaScript #Nodejs #Express #MongoDB",
     "duration": "2023.03.27 - 2023.04.03",
     "description": "다녀왔던 여행지에 대한 내용을 일기 형태로 기록할 수 있는 웹 서비스",
@@ -46,7 +46,7 @@
   },
   {
     "project": "팀프로젝트",
-    "title": "대전시민천문대 리뉴얼",
+    "title": "4. 대전시민천문대 리뉴얼",
     "tags": "#HTML #CSS #JavaScript open-API",
     "duration": "2023.02.24 - 2023.03.24",
     "description": "두번째 프로젝트. 복잡한 사이트맵을 재구성하고 예약 프로세스를 개선한 반응형 웹사이트",
@@ -61,7 +61,7 @@
   },
   {
     "project": "팀프로젝트",
-    "title": "뉴닉 구독 웹서비스 리뉴얼",
+    "title": "5. 뉴닉 구독 웹서비스 리뉴얼",
     "tags": "#HTML #CSS #JavaScript",
     "duration": "2023.01.25 - 2023.02.23",
     "description": "첫번째 프로젝트. 사이트의 장단점을 분석하여 사용자의 사용성과 콘텐츠 접근성을 개선한 반응형 웹사이트",
@@ -76,7 +76,7 @@
   },
   {
     "project": "개인프로젝트",
-    "title": "HoneyBeer(맥주 추천 어플)",
+    "title": "6. HoneyBeer(맥주 추천 어플)",
     "tags": "#React-Native #Expo #Firebase #Native-Base",
     "duration": "2023.05.16 - 2023.06.05",
     "description": "맥주 데이터를 활용하여 사용자에게 맥주를 추천하는 앱 서비스",
