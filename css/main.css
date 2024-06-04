@@ -137,6 +137,14 @@ main {
 .skill .skill-wrap {
   padding-top: 5rem;
 }
+.skill .skill-wrap-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skill .skill-wrap-con div:nth-of-type(2) {
+  width: 600px;
+}
 .skill .back-font {
   font-size: 12.5rem;
   line-height: 0.8;
@@ -147,31 +155,36 @@ main {
   right: 0;
   color: #eaeaea60;
 }
-.skill .edu::after {
+.skill .edu::after,
+.skill .certificate::after {
   content: "";
   border-bottom: 1px solid var(--point_c);
-  width: 600px;
+  width: 400px;
   height: 1px;
   position: absolute;
   bottom: 10px;
   left: 100%;
   margin-left: 2rem;
 }
-.skill .edu-list {
+.skill .edu-list,
+.skill .certificate-list {
   position: relative;
   padding: 0 var(--gap16);
   margin: var(--gap32);
   line-height: 200%;
 }
-.skill .edu-list li:first-of-type {
+.skill .edu-list li:first-of-type,
+.skill .certificate-list li:first-of-type {
   font-size: 1.25rem;
   color: #888;
   position: relative;
 }
-.skill .edu-list li:nth-of-type(2) {
+.skill .edu-list li:nth-of-type(2),
+.skill .certificate-list li:nth-of-type(2) {
   font-weight: bold;
 }
-.skill .edu-list .date::before {
+.skill .edu-list .date::before,
+.skill .certificate-list .date::before {
   content: "";
   position: absolute;
   border-left: 5px solid #666;
@@ -207,6 +220,7 @@ main {
 }
 .skill .icon-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0.5rem 0;
 }
